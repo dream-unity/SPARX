@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#112e2b">
+  <meta name="description" content="Explore ten extraordinary islands. Practise everyday thinking skills in an original, gentle adventure from Dream Unity.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Beacon Isles · Dream Unity</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#chapterTitle">Skip to adventure</a>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Beacon Isles home"><span class="brand-mark">✧</span><span>BEACON ISLES<small>A DREAM UNITY ADVENTURE</small></span></a>
+    <nav aria-label="Main navigation"><button class="nav-active" id="journeyBtn">Your journey</button><button id="journalBtn"><span aria-hidden="true">▤</span> Field journal</button><button id="aboutBtn">The story & science</button></nav>
+    <div class="header-actions"><button class="icon-btn" id="settingsBtn" aria-label="Settings">⚙</button><button class="quiet-button" id="pauseBtn">Take a pause <span aria-hidden="true">Ⅱ</span></button></div>
+  </header>
+  <div class="app-shell">
+    <aside class="journey" aria-label="Chapter selection">
+      <div class="journey-heading"><p class="eyebrow">THE ARCHIPELAGO</p><h2>Small steps.<br>New horizons.</h2><p>Ten islands. A little more perspective.</p></div>
+      <div class="journey-progress"><span>Your adventure</span><span id="progressText">0 / 10</span><div class="progress-track"><div id="progressFill"></div></div></div>
+      <div id="levelList" class="level-list"></div>
+      <div class="sidebar-bottom"><span class="little-sun">☼</span><p>At your pace.<br><strong>There is no race to the light.</strong></p></div>
+    </aside>
+    <main id="main">
+      <section class="chapter-header">
+        <div><p class="eyebrow" id="chapterEyebrow">CHAPTER 01 · THE FOUNDATIONS</p><h1 id="chapterTitle" tabindex="-1">Haven of Light</h1><p id="chapterSubtitle">Every journey begins with a little perspective.</p></div>
+        <div class="chapter-badge"><span aria-hidden="true">✧</span><span id="chapterSkill">Finding your footing</span></div>
+      </section>
+      <section class="world-wrap" aria-label="Explorable island">
+        <canvas id="world" tabindex="0" aria-label="Island exploration. Move with arrow keys or W A S D, press E to interact, or use the three quest buttons below."></canvas>
+        <div class="world-location"><span class="location-dot"></span><span id="biomeLabel">THE FIRST LIGHT</span></div>
+        <div class="world-compass" aria-hidden="true"><span>N</span>✧</div>
+        <div class="world-note"><span class="eyebrow">YOUR NEXT SMALL STEP</span><h2 id="questHeading">A spark is waiting.</h2><p id="questDescription">Explore the island and discover three waypoints. Each holds a new way to see things.</p><button class="primary" id="startBtn">Begin your journey <span aria-hidden="true">↗</span></button></div>
+        <div class="world-controls"><span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> move</span><span><kbd>E</kbd> interact</span><span>or tap to explore</span></div>
+        <button id="nearBtn" class="near-button" hidden>Explore waypoint</button>
+        <div class="touch-pad" aria-label="Movement controls"><button data-move="0,-1" aria-label="Move up">↑</button><button data-move="-1,0" aria-label="Move left">←</button><button data-move="0,1" aria-label="Move down">↓</button><button data-move="1,0" aria-label="Move right">→</button></div>
+      </section>
+      <section class="quest-section"><div class="section-title"><h2>The path through this island</h2><span id="questProgress">0 OF 3 WAYPOINTS</span></div><div id="questList" class="quest-list"></div></section>
+      <footer class="main-footer"><span><span class="save-dot"></span><span id="saveStatus">Progress stays in this browser</span></span><button id="helpBtn">How to play <span aria-hidden="true">↗</span></button></footer>
+    </main>
+  </div>
+  <dialog id="dialog" aria-labelledby="dialogTitle"><div class="dialog-top"><span class="eyebrow" id="dialogEyebrow">BEACON ISLES</span><button class="icon-btn" id="closeDialog" aria-label="Close dialog">×</button></div><div id="dialogBody"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

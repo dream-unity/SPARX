@@ -6,6 +6,8 @@ An original, playable ten-chapter CBT skills adventure by Dream Unity, developed
 
 The hosted version uses owner-private Sites access. The source repository is public.
 
+![Beacon Isles game preview](docs/preview.jpg)
+
 Explore ten procedural isometric islands, meet their challenges, collect three sparks per chapter and light each beacon. Every chapter includes an optional practical reflection. There is no countdown, death, score penalty or requirement to disclose personal experiences.
 
 ## What's playable
